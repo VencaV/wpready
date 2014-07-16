@@ -1,0 +1,1 @@
+$(".toggle-menu").on("click",function(a){a.preventDefault(),$("#navigation").toggle()});

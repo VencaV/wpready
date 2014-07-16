@@ -1,0 +1,14 @@
+{
+  "name": "medio-interactive-css-framework",
+  "version": "2.4.1",
+  "jqueryversion": "1.11.0",
+  "bootstrapversion": "3.2.0",
+  "author": "Václav Vracovský, http://www.medio.cz/",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.3.1"
+  }
+}
