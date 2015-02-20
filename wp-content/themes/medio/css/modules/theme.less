@@ -1,0 +1,33 @@
+// Buttons
+.btn {
+	// padding top & bottom; padding left & right; font-size; line-height; border-radius
+	.button-size(9px; 15px; @font-size-base; @line-height-base; @border-radius-base);
+}
+
+.btn-primary,
+a.btn-primary {
+	#gradient > .vertical(@btn-primary-bg, darken(@btn-primary-bg,3%));
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @btn-primary-color;
+		#gradient > .vertical(darken(@btn-primary-bg,3%), @btn-primary-bg);
+		border-color: @btn-primary-border;
+	}
+}
+
+.btn-default,
+a.btn-default {
+	#gradient > .vertical(@btn-default-bg, darken(@btn-default-bg,3%));
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: @btn-default-color;
+		#gradient > .vertical(darken(@btn-default-bg,3%), @btn-default-bg);
+		border-color: @btn-default-border;
+	}
+}

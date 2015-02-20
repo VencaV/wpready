@@ -1,13 +1,18 @@
 // Path to icons
 @icon-font-path:          "../fonts/glyphicons/";
 
+// Grid
+@grid-gutter-width: 30px;
+
 // Typography
 @font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base: 14px;
 
 // Headings
-@headings-font-family: @font-family-base;
+@headings-font-family: inherit;
 @headings-font-weight: 500;
+@headings-line-height: 1.1;
+@headings-color: inherit;
 @font-size-h1: floor(@font-size-base * 2.6); // ~36px
 @font-size-h2: floor(@font-size-base * 2.15); // ~30px
 @font-size-h3: ceil(@font-size-base * 1.7); // ~24px
@@ -18,7 +23,8 @@
 // Colors
 @body-bg: #fff;
 @text-color: #474747;
-@link-color: #b80718;
+@brand-primary: #b80718;
+@link-color: @brand-primary;
 @link-hover-color: @link-color;
 
 // Breadcrumbs
@@ -26,3 +32,20 @@
 @breadcrumb-color: #474747;
 @breadcrumb-active-color: #474747;
 @breadcrumb-separator: "»";
+
+// Buttons
+@btn-primary-color: #fff;
+@btn-primary-bg: @brand-primary;
+@btn-primary-border: darken(@btn-primary-bg, 5%);
+
+@btn-default-color: #333;
+@btn-default-bg: #fff;
+@btn-default-border: #ddd;
+
+// Forms
+@input-border: #ccc;
+@input-border-radius: @border-radius-base;
+@input-border-radius-large: @border-radius-large;
+@input-border-radius-small: @border-radius-small;
+@input-border-focus: #66afe9;
+@input-color-placeholder: #999;

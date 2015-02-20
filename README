@@ -1,17 +1,11 @@
-Medio Interactive CSS framework
-Version: 2.4.1
-Author: Václav Vracovský (http://www.medio.cz)
-Date: July 2014
+HTML & CSS framework
+Version: 2.4.6
+Author: Václav Vracovský (http://vracovsky.cz)
+Date: February 2015
 
 
- _____                  _                               _
-|  __ \                (_)                             | |
-| |__) |___  __ _ _   _ _ _ __ ___ _ __ ___   ___ _ __ | |_ ___
-|  _  // _ \/ _` | | | | | '__/ _ \ '_ ` _ \ / _ \ '_ \| __/ __|
-| | \ \  __/ (_| | |_| | | | |  __/ | | | | |  __/ | | | |_\__ \
-|_|  \_\___|\__, |\__,_|_|_|  \___|_| |_| |_|\___|_| |_|\__|___/
-               | |
-               |_|
+Requirements
+______________________________________________________
 
 nodeJs
 http://nodejs.org/
@@ -19,16 +13,13 @@ http://nodejs.org/
 Grunt
 http://gruntjs.com/
 
- _    _
-| |  | |
-| |  | |___  __ _  __ _  ___
-| |  | / __|/ _` |/ _` |/ _ \
-| |__| \__ \ (_| | (_| |  __/
- \____/|___/\__,_|\__, |\___|
-                   __/ |
-                  |___/
 
-1. For development, run
+Usage
+______________________________________________________
+
+1. Rename template folder under wp-content/themes and set the "templatename" in package.json (default: medio)
+
+2. For development, run
 $ npm install (only for the first time), then run
 $ grunt
 JS and CSS files are now watched and automatically compiled.

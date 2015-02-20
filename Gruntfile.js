@@ -5,35 +5,39 @@ grunt.initConfig({
 	less: {
 		development: {
 			options: {
-				yuicompress: false
+				compress: false,
+				sourceMap: true,
+				sourceMapFilename: 'html/project/_ui/css/main.css.map',
+				sourceMapURL: 'main.css.map',
+				sourceMapRootpath: '/',
 			},
 			files: {
-				'wp-content/themes/medio/css/main.css': 'wp-content/themes/medio/css/main.less',
-				'wp-content/themes/medio/css/ie8.css': 'wp-content/themes/medio/css/ie8.less'
+				'wp-content/themes/<%= pkg.templatename %>/css/main.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less',
+				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less'
 			}
 		},
 		production: {
 				options: {
-				yuicompress: true
+				compress: true
 			},
 			files: {
-				'wp-content/themes/medio/style.css': 'wp-content/themes/medio/css/main.less',
-				'wp-content/themes/medio/css/ie8.css': 'wp-content/themes/medio/css/ie8.less'
+				'wp-content/themes/<%= pkg.templatename %>/style.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less',
+				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less'
 			}
 		}
 		},
 		watch: {
 			css: {
 				files: [
-					'wp-content/themes/medio/css/*.less',
-					'wp-content/themes/medio/css/modules/*.less',
-					'wp-content/themes/medio/bootstrap/less/*.less'
+					'wp-content/themes/<%= pkg.templatename %>/css/*.less',
+					'wp-content/themes/<%= pkg.templatename %>/css/modules/*.less',
+					'wp-content/themes/<%= pkg.templatename %>/bootstrap/less/*.less'
 				],
 				tasks: ['less:development']
 			},
 			js: {
 				files: [
-					'wp-content/themes/medio/js/modules/*.js'
+					'wp-content/themes/<%= pkg.templatename %>/js/modules/*.js'
 				],
 				tasks: ['compile-js']
 			}
@@ -44,10 +48,10 @@ grunt.initConfig({
 			},
 			dist: {
 				src: [
-					//'wp-content/themes/medio/js/modules/jquery-<%= pkg.jqueryversion %>.min.js',
-					'wp-content/themes/medio/js/modules/main.js'
+					//'wp-content/themes/<%= pkg.templatename %>/js/modules/jquery-<%= pkg.jqueryversion %>.min.js',
+					'wp-content/themes/<%= pkg.templatename %>/js/modules/main.js'
 				],
-				dest: 'wp-content/themes/medio/js/main.js',
+				dest: 'wp-content/themes/<%= pkg.templatename %>/js/main.js',
 			}
 		},
 		uglify: {
@@ -56,7 +60,7 @@ grunt.initConfig({
 			},
 			dist: {
 				files: {
-					'wp-content/themes/medio/js/main-min.js': ['wp-content/themes/medio/js/main.js']
+					'wp-content/themes/<%= pkg.templatename %>/js/main-min.js': ['wp-content/themes/<%= pkg.templatename %>/js/main.js']
 				}
 			}
 		}

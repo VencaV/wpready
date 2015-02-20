@@ -1,14 +1,20 @@
 {
-  "name": "medio-interactive-css-framework",
-  "version": "2.4.1",
-  "jqueryversion": "1.11.0",
-  "bootstrapversion": "3.2.0",
-  "author": "Václav Vracovský, http://www.medio.cz/",
+  "name": "just-html-and-css-framework",
+  "version": "2.4.6",
+  "jqueryversion": "1.11.2",
+  "bootstrapversion": "3.3.1",
+  "templatename": "medio",
+  "author": "Václav Vracovský, http://vracovsky.cz/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VencaV/wpready.git"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.7.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.1"
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-php": "~1.0.1"
   }
 }
