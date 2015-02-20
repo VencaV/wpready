@@ -7,13 +7,12 @@ grunt.initConfig({
 			options: {
 				compress: false,
 				sourceMap: true,
-				sourceMapFilename: 'html/project/_ui/css/main.css.map',
-				sourceMapURL: 'main.css.map',
-				sourceMapRootpath: '/',
+				sourceMapFilename: 'wp-content/themes/<%= pkg.templatename %>/style.css.map',
+				sourceMapRootpath: '/'
 			},
 			files: {
-				'wp-content/themes/<%= pkg.templatename %>/css/main.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less',
-				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less'
+				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less',
+				'wp-content/themes/<%= pkg.templatename %>/style.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less'
 			}
 		},
 		production: {
@@ -21,8 +20,8 @@ grunt.initConfig({
 				compress: true
 			},
 			files: {
-				'wp-content/themes/<%= pkg.templatename %>/style.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less',
-				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less'
+				'wp-content/themes/<%= pkg.templatename %>/css/ie8.css': 'wp-content/themes/<%= pkg.templatename %>/css/ie8.less',
+				'wp-content/themes/<%= pkg.templatename %>/style.css': 'wp-content/themes/<%= pkg.templatename %>/css/main.less'
 			}
 		}
 		},
